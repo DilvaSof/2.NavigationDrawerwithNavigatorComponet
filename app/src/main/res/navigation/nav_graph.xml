@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/exampleListFragment">
+
+    <fragment
+        android:id="@+id/exampleListFragment"
+        android:name="com.example.myapplication.ExampleListFragment"
+        android:label="fragment_example_list"
+        tools:layout="@layout/fragment_example_list" >
+        <action
+            android:id="@+id/action_List_to_Detail"
+            app:destination="@id/exampleDetailFragment" />
+        <action
+            android:id="@+id/action_List_to_Add"
+            app:destination="@id/exampleAddEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exampleDetailFragment"
+        android:name="com.example.myapplication.ExampleDetailFragment
+"
+        android:label="fragment_example_detail"
+        tools:layout="@layout/fragment_example_detail" >
+        <action
+            android:id="@+id/action_Detail_to_Edit"
+            app:destination="@id/exampleAddEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exampleAddEditFragment"
+        android:name="com.example.myapplication.ExampleAddEditFragment"
+        android:label="fragment_example_add_edit"
+        tools:layout="@layout/fragment_example_add_edit" />
+</navigation>
